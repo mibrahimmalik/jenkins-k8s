@@ -14,10 +14,8 @@ RUN apt-get -qq update && \
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 # Download terraform for linux
 RUN wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
-
 # Unzip
 RUN unzip terraform_0.11.11_linux_amd64.zip
-
 # Move to local bin
 RUN mv terraform /usr/local/bin/
 # Check that it's installed
